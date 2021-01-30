@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Card: Identifiable, Decodable {
+struct Card: Identifiable, Decodable, Hashable {
    
     var id : String
     var download_url : String

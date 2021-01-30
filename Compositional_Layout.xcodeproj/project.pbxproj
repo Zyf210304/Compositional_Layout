@@ -17,6 +17,9 @@
 		00CCE3A925C3A79900D3AE97 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CCE3A825C3A79900D3AE97 /* Card.swift */; };
 		00CCE3AC25C3A89100D3AE97 /* JSONViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CCE3AB25C3A89100D3AE97 /* JSONViewModel.swift */; };
 		00CCE3B025C3F2E100D3AE97 /* Layout1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CCE3AF25C3F2E100D3AE97 /* Layout1.swift */; };
+		02EE027825C54DA6005CE853 /* Layout2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE027725C54DA6005CE853 /* Layout2.swift */; };
+		02EE027B25C54EC7005CE853 /* Layout3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE027A25C54EC7005CE853 /* Layout3.swift */; };
+		02EE027F25C55678005CE853 /* ContextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EE027E25C55678005CE853 /* ContextModifier.swift */; };
 		AC5029DD490AD7E23FDF651F /* Pods_Compositional_Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE4810A0AD37292C7EDF20AD /* Pods_Compositional_Layout.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +36,9 @@
 		00CCE3A825C3A79900D3AE97 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		00CCE3AB25C3A89100D3AE97 /* JSONViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONViewModel.swift; sourceTree = "<group>"; };
 		00CCE3AF25C3F2E100D3AE97 /* Layout1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout1.swift; sourceTree = "<group>"; };
+		02EE027725C54DA6005CE853 /* Layout2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout2.swift; sourceTree = "<group>"; };
+		02EE027A25C54EC7005CE853 /* Layout3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout3.swift; sourceTree = "<group>"; };
+		02EE027E25C55678005CE853 /* ContextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextModifier.swift; sourceTree = "<group>"; };
 		12E0A6CFD6752A200B562446 /* Pods-Compositional_Layout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Compositional_Layout.release.xcconfig"; path = "Target Support Files/Pods-Compositional_Layout/Pods-Compositional_Layout.release.xcconfig"; sourceTree = "<group>"; };
 		64637C45014C481AD71447FB /* Pods-Compositional_Layout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Compositional_Layout.debug.xcconfig"; path = "Target Support Files/Pods-Compositional_Layout/Pods-Compositional_Layout.debug.xcconfig"; sourceTree = "<group>"; };
 		AE4810A0AD37292C7EDF20AD /* Pods_Compositional_Layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Compositional_Layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +102,7 @@
 		00CCE3A125C3A5EC00D3AE97 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				02EE027D25C5564E005CE853 /* Modifier */,
 				00CCE3AE25C3E6AD00D3AE97 /* Compositional Groups */,
 				00CCE3A425C3A68000D3AE97 /* Home.swift */,
 			);
@@ -122,8 +129,18 @@
 			isa = PBXGroup;
 			children = (
 				00CCE3AF25C3F2E100D3AE97 /* Layout1.swift */,
+				02EE027725C54DA6005CE853 /* Layout2.swift */,
+				02EE027A25C54EC7005CE853 /* Layout3.swift */,
 			);
 			path = "Compositional Groups";
+			sourceTree = "<group>";
+		};
+		02EE027D25C5564E005CE853 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				02EE027E25C55678005CE853 /* ContextModifier.swift */,
+			);
+			path = Modifier;
 			sourceTree = "<group>";
 		};
 		1C2E66B4963D9CED0F602E0C /* Pods */ = {
@@ -257,12 +274,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02EE027825C54DA6005CE853 /* Layout2.swift in Sources */,
 				00CCE38A25C3A40500D3AE97 /* AppDelegate.swift in Sources */,
 				00CCE38C25C3A40500D3AE97 /* SceneDelegate.swift in Sources */,
 				00CCE3AC25C3A89100D3AE97 /* JSONViewModel.swift in Sources */,
 				00CCE3B025C3F2E100D3AE97 /* Layout1.swift in Sources */,
 				00CCE3A925C3A79900D3AE97 /* Card.swift in Sources */,
+				02EE027B25C54EC7005CE853 /* Layout3.swift in Sources */,
 				00CCE3A525C3A68000D3AE97 /* Home.swift in Sources */,
+				02EE027F25C55678005CE853 /* ContextModifier.swift in Sources */,
 				00CCE38E25C3A40500D3AE97 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

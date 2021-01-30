@@ -48,10 +48,26 @@ struct Home: View {
                 ScrollView {
                     
                     VStack(spacing: 4, content: {
-                        
-                        Layout1(cards: jsonModel.cards)
+                         
+                        ForEach(jsonModel.compositionalArray.indices, id: \.self) { index in
                             
+                            
+                            if index == 0 || index % 6 == 0{
+                                
+                                Layout1(cards: jsonModel.compositionalArray[index])
+                            }
+                            else if index % 3 == 0{
+                                
+                                Layout3(cards: jsonModel.compositionalArray[index])
+                            }
+                            else {
+                                
+                                Layout2(cards: jsonModel.compositionalArray[index])
+                            }
+                            
+                        }
                     })
+                    .padding()
                 }
             }
         }

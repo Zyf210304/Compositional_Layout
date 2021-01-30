@@ -12,13 +12,15 @@ class JSONViewModel: ObservableObject {
     @Published var cards : [Card] = []
     
     @Published var search = ""
+    
+    @Published var compositionalArray : [[Card]] = []
     init() {
         fetchJSON()
     }
     
     func fetchJSON() {
         
-        let url = "https://picsum.photos/v2/list?page=2&limit=100"
+        let url = "https://picsum.photos/v2/list?page=2&limit=80"
         
         let session = URLSession(configuration: .default)
         session.dataTask(with: URL(string: url)!) { (data, _, _) in
@@ -32,8 +34,32 @@ class JSONViewModel: ObservableObject {
             DispatchQueue.main.async {
                 self.cards = cards
                 print(cards)
+                self.setCompisitonalLayout()
             }
         }
         .resume()
+    }
+    
+    func setCompisitonalLayout() {
+        
+        var currentArrayCards : [Card] = []
+        
+        cards.forEach { (card) in
+            
+            currentArrayCards.append(card)
+            
+            if currentArrayCards.count == 3 {
+                
+                compositionalArray.append(currentArrayCards)
+                currentArrayCards.removeAll()
+            }
+            
+            if currentArrayCards.count != 3 && card.id == cards.last!.id {
+                
+                compositionalArray.append(currentArrayCards)
+                currentArrayCards.removeAll()
+            }
+            
+        }
     }
 }
